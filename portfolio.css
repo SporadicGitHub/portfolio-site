@@ -84,7 +84,7 @@ html, body {
 
 .floating-home-btn {
     position: fixed;
-    right: 350px;
+    left: 50%;
     bottom: 100px;
     display: inline-flex;
     align-items: center;
@@ -96,6 +96,7 @@ html, body {
     background-color: #137510;
     border-radius: 20px;
     transition: transform 0.2s ease, background-color 0.2s ease;
+     transform: translateX(-50%);
 }
 .floating-home-btn:hover {
     transform: scale(1.05);
