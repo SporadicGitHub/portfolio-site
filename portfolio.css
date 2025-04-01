@@ -176,4 +176,27 @@ html, body {
         right: 10px;
         bottom: 70px;
     }
+
+    /* Default: 3 columns for desktop */
+.masonry {
+    column-count: 3;
+    column-gap: 1rem;
+  }
+  
+  /* For tablets and smaller screens (e.g., below 900px) */
+  @media (max-width: 900px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+  
+  /* If you want to ensure phones don't shrink too much (optional) */
+  /*
+  @media (max-width: 480px) {
+    .masonry {
+      column-count: 2;  // Keep 2 columns even on very small phones if it looks good
+    }
+  }
+  */
+  
 }
