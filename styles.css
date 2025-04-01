@@ -206,4 +206,16 @@ body {
   .scroll-indicator {
     bottom: 20px;
   }
+
+  @media (max-width: 600px) {
+    .first-screen {
+      /* Increase height to provide more content space on mobile */
+      min-height: 120vh; /* or adjust as needed */
+      padding-bottom: 2rem;
+    }
+    /* Optionally adjust the positioning of the profile picture and other elements */
+    .profile-pic-container {
+      top: 250px; /* tweak this value to balance the layout */
+    }
+  }
 }
