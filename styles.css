@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.page-container {
+  width: 100%;
+  height: 200vh;
+  /* background: url('background.jpg') no-repeat center center; */
+  background-size: cover;
+  background: linear-gradient(to bottom, #171c77, #000000);
+  position: relative;
+}
+
+/* First Screen: occupies 100vh */
+.first-screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+/* Banner Section */
+.banner-section {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background: url('resources/essential-images/wp1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.profile-pic-container {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  max-width: 40vw;
+}
+
+.intro-section {
+  margin-top: 120px;
+}
+
+.my-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-tagline {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 0 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 45px;
+  text-decoration: none;
+  color: #F5F5DC;
+  background-color:#137510;  ;
+  border-radius: 50px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-list a:hover {
+  transform: scale(1.05);
+  background-color: #083f06;
+}
+
+.content-block .portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 45px;
+  text-decoration: none;
+  color: #F5F5DC;
+  background-color: #137510;
+  border-radius: 50px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.content-block .portfolio-btn:hover {
+  transform: scale(1.05);
+  background-color: #083f06;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator .arrow {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.second-screen {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.content-block {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.content-block p {
+  margin-bottom: 1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-item {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .profile-pic {
+    max-width: 50vw;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content-block {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 20px;
+  }
+}
