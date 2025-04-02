@@ -129,26 +129,32 @@ html, body {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.7); /* Dimmed background */
+    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
     justify-content: center;
     align-items: center;
-}
-.modal-content {
+    overflow-y: auto; /* Allow scrolling if needed */
+  }
+  
+  .modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-#modalImg {
+    max-width: 90vw;   /* Limit width to 90% of viewport width */
+    max-height: 90vh;  /* Limit height to 90% of viewport height */
+    margin: auto;
+    overflow: auto;    /* Add scroll bars if content exceeds boundaries */
+  }
+  
+  #modalImg {
+    display: block;
     width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
     border-radius: 5px;
     transition: transform 0.2s ease;
-}
-
-.close {
+  }
+  
+  /* Close button remains the same */
+  .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -158,11 +164,11 @@ html, body {
     cursor: pointer;
     z-index: 1100;
     transition: color 0.2s ease;
-}
-.close:hover {
+  }
+  .close:hover {
     color: #ccc;
-}
-
+  }
+  
 @media (max-width: 900px) {
     .masonry {
         column-count: 2;
