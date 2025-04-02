@@ -54,3 +54,10 @@ document.getElementById("imgModal").addEventListener('click', function(e) {
     closeModal();
   }
 });
+
+// Close modal when the ESC key is pressed
+document.addEventListener('keydown', function(e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
